@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<main class="wrap">
+  <article class="post">
+    <a class="back label" href="{{ "/blog/" | relative_url }}">← All posts</a>
+    <header class="post-head">
+      <div class="label">{{ page.date | date: "%-d %B %Y" }}{% if page.tags.size > 0 %} · {{ page.tags | join: " · " }}{% endif %}</div>
+      <h1>{{ page.title }}</h1>
+      {% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+    </header>
+    <div class="post-body">
+      {{ content }}
+    </div>
+    <footer class="post-foot">
+      <p>Written by Ntiyiso Wayne Ndhlovu, Process Analyst in Johannesburg. <a href="{{ "/" | relative_url }}#contact">Get in touch</a> or <a href="https://www.linkedin.com/in/ntiyiso-ndhlovu-840048129/">connect on LinkedIn</a>.</p>
+    </footer>
+  </article>
+</main>

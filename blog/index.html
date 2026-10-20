@@ -1,0 +1,27 @@
+---
+layout: default
+title: Blog
+description: Notes on business analysis, process design and data by Ntiyiso Wayne Ndhlovu.
+---
+<main class="wrap">
+  <section class="blog-head">
+    <div class="label">Blog</div>
+    <h1>Notes on analysis, process and data</h1>
+    <p class="prose">What I'm learning as a business and process analyst moving into data engineering.</p>
+  </section>
+  {% if site.posts.size > 0 %}
+  <ol class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url | relative_url }}">
+        <span class="label">{{ post.date | date: "%-d %b %Y" }}{% if post.tags.size > 0 %} · {{ post.tags | join: " · " }}{% endif %}</span>
+        <h2>{{ post.title }}</h2>
+        <p>{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt | strip_html | truncatewords: 32 }}{% endif %}</p>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p class="empty">The first post is on its way.</p>
+  {% endif %}
+</main>

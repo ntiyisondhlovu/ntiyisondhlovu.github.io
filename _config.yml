@@ -1,0 +1,21 @@
+title: Ntiyiso Wayne Ndhlovu
+description: Process and business analyst in Johannesburg, writing about business analysis, process design and data.
+author: Ntiyiso Wayne Ndhlovu
+url: https://ntiyisondhlovu.github.io
+baseurl: ""
+lang: en
+timezone: Africa/Johannesburg
+markdown: kramdown
+permalink: /blog/:year/:month/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+feed:
+  path: blog/feed.xml
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+exclude:
+  - README.md
+  - POSTING.md
+  - _templates
