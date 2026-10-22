@@ -235,7 +235,7 @@ title: Business Process Analyst
     <div class="head"><div class="label">Writing</div><h2>Latest from the blog</h2></div>
     <ul class="latest">
       {% for post in site.posts limit:3 %}
-      <li><a href="{{ post.url | relative_url }}"><span class="label">{{ post.date | date: "%-d %b %Y" }}</span><h3>{{ post.title }}</h3><p>{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt | strip_html | truncatewords: 24 }}{% endif %}</p></a></li>
+      <li><a href="{{ post.url | relative_url }}"><span class="label">{{ post.date | date: "%-d %b %Y" }}</span><h3>{{ post.title }}</h3><p>{% if post.description or post.summary %}{{ post.description | default: post.summary }}{% else %}{{ post.excerpt | strip_html | truncatewords: 24 }}{% endif %}</p></a></li>
       {% endfor %}
     </ul>
     <p style="margin-top:20px"><a class="btn" href="{{ "/blog/" | relative_url }}">All posts</a></p>

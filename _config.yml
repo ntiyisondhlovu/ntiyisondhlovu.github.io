@@ -12,7 +12,16 @@ plugins:
   - jekyll-seo-tag
 feed:
   path: blog/feed.xml
+twitter:
+  card: summary_large_image
+social:
+  name: Ntiyiso Wayne Ndhlovu
+  links:
+    - https://www.linkedin.com/in/ntiyiso-ndhlovu-840048129/
+    - https://github.com/ntiyisondhlovu
 defaults:
+  - scope: { path: "" }
+    values: { image: /assets/images/share-card.jpg }
   - scope: { path: "", type: posts }
     values: { layout: post }
 exclude:

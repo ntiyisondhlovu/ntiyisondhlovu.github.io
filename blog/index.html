@@ -16,7 +16,7 @@ description: Notes on business analysis, process design and data by Ntiyiso Wayn
       <a href="{{ post.url | relative_url }}">
         <span class="label">{{ post.date | date: "%-d %b %Y" }}{% if post.tags.size > 0 %} · {{ post.tags | join: " · " }}{% endif %}</span>
         <h2>{{ post.title }}</h2>
-        <p>{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt | strip_html | truncatewords: 32 }}{% endif %}</p>
+        <p>{% if post.description or post.summary %}{{ post.description | default: post.summary }}{% else %}{{ post.excerpt | strip_html | truncatewords: 32 }}{% endif %}</p>
       </a>
     </li>
     {% endfor %}

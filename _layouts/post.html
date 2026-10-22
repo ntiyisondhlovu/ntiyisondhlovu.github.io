@@ -7,13 +7,24 @@ layout: default
     <header class="post-head">
       <div class="label">{{ page.date | date: "%-d %B %Y" }}{% if page.tags.size > 0 %} · {{ page.tags | join: " · " }}{% endif %}</div>
       <h1>{{ page.title }}</h1>
-      {% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+      {% assign blurb = page.description | default: page.summary %}{% if blurb %}<p class="lede">{{ blurb }}</p>{% endif %}
     </header>
     <div class="post-body">
       {{ content }}
+    </div>
+    <div class="share" aria-label="Share this post">
+      <span class="label">Share</span>
+      <a class="btn share-li" href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | cgi_escape }}" target="_blank" rel="noopener">Share on LinkedIn</a>
+      <button class="btn share-copy" type="button" data-url="{{ page.url | absolute_url }}">Copy link</button>
     </div>
     <footer class="post-foot">
       <p>Written by Ntiyiso Wayne Ndhlovu, Business Process Analyst in Johannesburg. <a href="{{ "/" | relative_url }}#contact">Get in touch</a> or <a href="https://www.linkedin.com/in/ntiyiso-ndhlovu-840048129/">connect on LinkedIn</a>.</p>
     </footer>
   </article>
 </main>
+<script>
+document.querySelectorAll('.share-copy').forEach(function(b){b.addEventListener('click',function(){
+  var u=b.dataset.url;function ok(){b.textContent='Link copied';setTimeout(function(){b.textContent='Copy link';},1600);}
+  try{navigator.clipboard.writeText(u).then(ok,function(){prompt('Copy this link',u);});}catch(e){prompt('Copy this link',u);}
+});});
+</script>

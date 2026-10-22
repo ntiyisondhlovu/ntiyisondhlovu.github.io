@@ -1,7 +1,9 @@
 ---
 title: "Your post title"
-summary: "One sentence that tells readers what they'll get from this post."
+description: "One sentence that tells readers what they'll get from this post."
 tags: [Business analysis]
+# Optional: a picture for the LinkedIn preview (1200 x 630 works best). Leave this out to use your default card.
+# image: /assets/images/your-cover.jpg
 ---
 
 Open with the problem or question in two or three sentences.

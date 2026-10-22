@@ -20,3 +20,9 @@ Files in `_drafts` are not published. Move a file into `_posts` and add the date
 ## Edit or remove a post
 
 Open the file in `_posts` and click the pencil icon to edit, or the three-dot menu to delete. Commit to publish the change.
+
+## Share a post on LinkedIn
+
+Every post has a **Share on LinkedIn** button at the bottom. LinkedIn shows the post's title, its `description` and a preview image. The image defaults to your share card (`assets/images/share-card.jpg`); to use a different one for a post, add `image: /assets/images/your-cover.jpg` to its front matter (1200 x 630 pixels works best).
+
+If LinkedIn shows an old preview after you change a post, paste the post's link into https://www.linkedin.com/post-inspector/ to refresh it.

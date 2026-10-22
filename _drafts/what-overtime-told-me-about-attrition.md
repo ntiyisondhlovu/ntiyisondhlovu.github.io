@@ -1,6 +1,6 @@
 ---
 title: "What overtime told me about attrition"
-summary: "Notes from my HR Attrition project on why overtime, not performance, was the clearest signal of who leaves."
+description: "Notes from my HR Attrition project on why overtime, not performance, was the clearest signal of who leaves."
 tags: [Power BI, HR analytics]
 ---
 
