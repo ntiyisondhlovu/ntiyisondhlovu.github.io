@@ -35,6 +35,6 @@ The site always links to `assets/files/Ntiyiso-Wayne-Ndhlovu-CV.pdf`. To replace
 2. Open the `assets/files` folder in this repository and click **Add file → Upload files**.
 3. Drag in the PDF and click **Commit changes**. GitHub replaces the old file because the name is the same.
 
-The new CV is live about a minute later. Every "Download CV" button and the short link **ntiyisondhlovu.github.io/cv** point to it, so nothing else needs changing.
+The new PDF is live about a minute later, and every "Download PDF" button points to it. The CV page at **ntiyisondhlovu.github.io/cv** is a web version of the CV written in `cv.html`; if your experience or skills change, update that file too, or ask Claude to.
 
 Before uploading, remove anything you don't want public, such as references' phone numbers.
