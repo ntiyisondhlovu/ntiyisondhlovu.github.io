@@ -18,7 +18,7 @@ h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;text-wrap:b
 .fill{background:var(--ochre-soft);color:var(--ochre);border-radius:3px;padding:0 4px}
 
 /* nav */
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+body > header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--accent);border-bottom:1px solid #174C99;box-shadow:0 2px 10px -4px rgba(20,27,38,.25)}
 nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
 .brand{font-family:var(--display);font-weight:700;font-size:18px;text-decoration:none;color:var(--ink)}
 .links{display:flex;gap:22px;flex-wrap:wrap;font-size:14px}
@@ -242,3 +242,12 @@ dialog#viewer .close{display:block;margin:0 0 12px auto;font-family:var(--mono);
 
 /* white theme: cards lift with a soft shadow instead of a fill */
 .card,.pillar,.ba-grid > div,.how > div,.edu > div,.road li,.post-list a,.latest a{box-shadow:0 1px 2px rgba(20,27,38,.04),0 6px 18px -12px rgba(20,27,38,.18)}
+
+/* blue menu bar */
+body > header{--it:#FFFFFF;--proc:#CFE0FA;--data:#8DBBF2;--bg:#1F5FBF}
+body > header .brand,body > header .brand-text span{color:#FFFFFF}
+body > header .brand-text small{color:#CFE0FA}
+body > header .mark{color:rgba(255,255,255,.55)}
+body > header .links a{color:rgba(255,255,255,.82);padding-block:4px;border-bottom:2px solid transparent}
+body > header .links a:hover{color:#FFFFFF;border-bottom-color:#FFFFFF}
+body > header a:focus-visible{outline-color:#FFFFFF}
