@@ -13,6 +13,7 @@ title: Business Process Analyst
       <div class="pillar-chips"><a href="#pillars" class="pc it"><i></i>IT</a><a href="#pillars" class="pc proc"><i></i>Processes</a><a href="#pillars" class="pc data"><i></i>Data</a></div>
       <div class="ctas">
         <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="{{ "/assets/files/Ntiyiso-Wayne-Ndhlovu-CV.pdf" | relative_url }}" target="_blank" rel="noopener">Download CV</a>
         <a class="btn" href="#contact">Get in touch</a>
       </div>
     </div>
@@ -275,8 +276,13 @@ title: Business Process Analyst
         <button class="copy" id="copyBtn" type="button">Copy email</button>
       </div>
       <div class="contact-row">
+        <a class="addr phone" id="phone" href="tel:+27791574957">079 157 4957</a>
+        <button class="copy" id="copyPhone" type="button">Copy number</button>
+      </div>
+      <div class="contact-row">
         <a class="btn" href="https://www.linkedin.com/in/ntiyiso-ndhlovu-840048129/">LinkedIn</a>
         <a class="btn" href="https://github.com/ntiyisondhlovu">GitHub</a>
+        <a class="btn primary" href="{{ "/assets/files/Ntiyiso-Wayne-Ndhlovu-CV.pdf" | relative_url }}" target="_blank" rel="noopener">Download CV (PDF)</a>
       </div>
     </div>
   </section>
@@ -285,6 +291,11 @@ title: Business Process Analyst
 <dialog id="viewer" aria-label="Screenshot"><button class="close" type="button" id="viewerClose">Close</button><img id="viewerImg" alt=""></dialog>
 
 <script>
+document.getElementById('copyPhone').addEventListener('click', function(){
+  var btn = this, el = document.getElementById('phone');
+  function selectIt(){ var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Press Ctrl+C'; }
+  try { navigator.clipboard.writeText(el.textContent.trim()).then(function(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy number'; }, 1600); }, selectIt); } catch(e){ selectIt(); }
+});
 document.getElementById('copyBtn').addEventListener('click', function(){
   var btn = this, el = document.getElementById('email'), text = el.innerText.trim();
   function selectIt(){ var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Press Ctrl+C'; }
