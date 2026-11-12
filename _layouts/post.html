@@ -1,34 +1,73 @@
 ---
 layout: default
 ---
-<main class="wrap">
+{% assign parts = content | split: '<h2' %}
+{% assign words = content | strip_html | number_of_words %}{% assign mins = words | divided_by: 200 | plus: 1 %}
+<div class="read-progress" aria-hidden="true"><span id="readBar"></span></div>
+<main class="wrap post-wrap">
   <article class="post">
     <a class="back label" href="{{ "/blog/" | relative_url }}">← All posts</a>
     <header class="post-head">
-      <div class="label">{{ page.date | date: "%-d %B %Y" }}{% if page.tags.size > 0 %} · {{ page.tags | join: " · " }}{% endif %}</div>
+      <div class="post-tags">{% for t in page.tags %}<span>{{ t }}</span>{% endfor %}</div>
       <h1>{{ page.title }}</h1>
       {% assign blurb = page.description | default: page.summary %}{% if blurb %}<p class="lede">{{ blurb }}</p>{% endif %}
+      <div class="byline">
+        <img src="{{ "/assets/images/cv-photo.jpg" | relative_url }}" alt="" width="44" height="44">
+        <div><b>Ntiyiso Wayne Ndhlovu</b><span>{{ page.date | date: "%-d %B %Y" }} · {{ mins }} min read</span></div>
+      </div>
     </header>
-    {% assign parts = content | split: '<h2' %}
+
     <div class="post-body boxed">
       <section class="pbox pbox-intro">{{ parts.first }}</section>
       {% for part in parts offset:1 %}{% assign n = forloop.index | prepend: '0' | slice: -2, 2 %}
       <section class="pbox"><span class="pbox-n">{{ n }}</span><h2{{ part }}</section>
       {% endfor %}
     </div>
-    <div class="share" aria-label="Share this post">
-      <span class="label">Share</span>
-      <a class="btn share-li" href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | cgi_escape }}" target="_blank" rel="noopener">Share on LinkedIn</a>
-      <button class="btn share-copy" type="button" data-url="{{ page.url | absolute_url }}">Copy link</button>
+
+    <div class="post-end">
+      <div>
+        <div class="label">Thanks for reading</div>
+        <p>If this was useful, share it with someone who might need it.</p>
+      </div>
+      <div class="share" aria-label="Share this post">
+        <a class="btn share-li" href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | cgi_escape }}" target="_blank" rel="noopener">Share on LinkedIn</a>
+        <button class="btn share-copy" type="button" data-url="{{ page.url | absolute_url }}">Copy link</button>
+      </div>
     </div>
+
     <footer class="post-foot">
-      <p>Written by Ntiyiso Wayne Ndhlovu, Business Analyst in Johannesburg. <a href="{{ "/" | relative_url }}#contact">Get in touch</a> or <a href="https://www.linkedin.com/in/ntiyiso-ndhlovu-840048129/">connect on LinkedIn</a>.</p>
+      <img src="{{ "/assets/images/cv-photo.jpg" | relative_url }}" alt="" width="56" height="56">
+      <p><b>Ntiyiso Wayne Ndhlovu</b> is a Business Analyst in Johannesburg, working across people, process and technology. <a href="{{ "/" | relative_url }}#contact">Get in touch</a> or <a href="https://www.linkedin.com/in/ntiyiso-ndhlovu-840048129/">connect on LinkedIn</a>.</p>
     </footer>
+    <p class="post-more"><a class="btn" href="{{ "/blog/" | relative_url }}">← Back to all posts</a></p>
   </article>
+
+  {% if parts.size > 1 %}
+  <aside class="post-toc" aria-label="In this post">
+    <div class="label">In this post</div>
+    <ol>
+      {% for part in parts offset:1 %}{% assign hid = part | split: '"' %}{% assign htitle = part | split: '</h2>' | first | split: '>' | last %}
+      <li><a href="#{{ hid[1] }}"><span>{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>{{ htitle }}</a></li>
+      {% endfor %}
+    </ol>
+  </aside>
+  {% endif %}
 </main>
 <script>
 document.querySelectorAll('.share-copy').forEach(function(b){b.addEventListener('click',function(){
   var u=b.dataset.url;function ok(){b.textContent='Link copied';setTimeout(function(){b.textContent='Copy link';},1600);}
   try{navigator.clipboard.writeText(u).then(ok,function(){prompt('Copy this link',u);});}catch(e){prompt('Copy this link',u);}
 });});
+(function(){
+  var bar=document.getElementById('readBar'),art=document.querySelector('.post-body');
+  var links=[].slice.call(document.querySelectorAll('.post-toc a'));
+  var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.hash.slice(1)));});
+  function onScroll(){
+    var r=art.getBoundingClientRect(),h=r.height-innerHeight*.6;
+    bar.style.width=Math.max(0,Math.min(100,(-r.top/h)*100))+'%';
+    var cur=-1;heads.forEach(function(el,i){if(el&&el.getBoundingClientRect().top<innerHeight*.35)cur=i;});
+    links.forEach(function(a,i){a.classList.toggle('on',i===cur);});
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+})();
 </script>
