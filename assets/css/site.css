@@ -598,3 +598,50 @@ dialog#pbViewer img{display:block;width:100%;height:auto;border-radius:6px;borde
 .vg-list span{font-size:13.5px;color:var(--ink)}
 .bc-list{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px}
 .bc-list li::marker{color:var(--accent);font-weight:600}
+
+/* technique diagrams */
+.ba-diagrams{margin-top:32px}
+.dg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media(max-width:860px){.dg-grid{grid-template-columns:1fr}}
+.dg{margin:0;background:#FFFFFF;border:1px solid var(--line);border-radius:var(--radius);padding:20px;display:grid;gap:12px;align-content:start;box-shadow:0 1px 2px rgba(20,27,38,.04),0 6px 18px -12px rgba(20,27,38,.18)}
+.dg figcaption{display:grid;gap:6px}
+.dg figcaption b{font-family:var(--display);font-size:18px}
+.dg .ka{justify-self:start}
+.dg p{margin:0;font-size:14px;color:var(--muted)}
+.dg-svg svg{display:block;width:100%;height:auto}
+.dg-svg text{font-family:var(--body)}
+.d-frame{fill:var(--tint);stroke:var(--line)}
+.d-lane rect{fill:var(--accent-soft);stroke:none}
+.d-rule{stroke:var(--line);stroke-width:1}
+.d-lanelabel{font-size:13px;font-weight:600;fill:var(--accent)}
+.d-start{fill:#FFFFFF;stroke:var(--accent);stroke-width:2}
+.d-end{fill:#FFFFFF;stroke:var(--ink);stroke-width:4}
+.d-task{fill:#FFFFFF;stroke:#B9CCE6;stroke-width:1.2}
+.d-done{fill:var(--accent);stroke:var(--accent)}
+.d-t{font-size:12.5px;fill:var(--ink)}
+.d-k{font-size:11px;font-family:var(--mono) !important;fill:var(--accent);letter-spacing:.04em}
+.d-kdone{font-size:11px;font-family:var(--mono) !important;fill:#DCE8FA;letter-spacing:.04em}
+.d-tdone{font-size:12.5px;fill:#FFFFFF;font-weight:600}
+.d-gate{fill:#FFFFFF;stroke:var(--accent);stroke-width:1.6}
+.d-gx{font-size:18px;fill:var(--accent);font-weight:600}
+.d-small{font-size:11.5px;fill:var(--muted)}
+.d-flow{fill:none;stroke:var(--accent);stroke-width:1.6}
+.d-dash{stroke-dasharray:4 3}
+.d-arrowhead{fill:var(--accent)}
+.d-q{fill:#FFFFFF;stroke:var(--line)}
+.d-qhot{fill:var(--accent)}
+.d-qt{font-size:14px;font-weight:600;fill:var(--ink)}
+.d-qthot{fill:#FFFFFF}
+.d-smallhot{fill:#DCE8FA}
+.d-dot{fill:var(--accent)}
+.d-dothot{fill:#FFFFFF}
+.d-thot{fill:#FFFFFF;font-weight:600}
+.d-axis{stroke:var(--muted);stroke-width:1.4;fill:none}
+.d-axishead{fill:var(--muted)}
+.d-axisl{font-size:12px;fill:var(--muted);font-family:var(--mono) !important;letter-spacing:.06em;text-transform:uppercase}
+.d-spine{stroke:var(--ink);stroke-width:3}
+.d-spinehead{fill:var(--ink)}
+.d-bone{stroke:var(--accent);stroke-width:2;fill:none}
+.d-bt{font-size:13px;font-weight:600;fill:var(--accent)}
+.d-effect{fill:var(--accent)}
+.d-et{font-size:13px;font-weight:600;fill:#FFFFFF}
