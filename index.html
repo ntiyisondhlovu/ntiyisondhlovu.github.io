@@ -163,102 +163,74 @@ title: Business Analyst
     </div>
 
     <div class="ba-diagrams">
-      <div class="ba-value-head"><div class="label">Techniques in practice</div><h3>Examples of the deliverables I produce, drawn on a made-up bank request.</h3></div>
-      <div class="dg-grid">
-        <figure class="dg">
-          <figcaption><span class="ka">Process Modelling</span><b>BPMN swimlane map</b></figcaption>
-          <div class="dg-svg"><svg viewBox="0 0 560 300" role="img" aria-labelledby="d1t"><title id="d1t">BPMN swimlane example: a client asks to update their address</title>
-<defs><marker id="ar1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrowhead"/></marker></defs>
-<rect x="1" y="1" width="558" height="298" rx="8" class="d-frame"/>
-<g class="d-lane"><rect x="1" y="1" width="78" height="98" rx="8"/><rect x="1" y="100" width="78" height="100"/><rect x="1" y="200" width="78" height="99" rx="8"/></g>
-<line x1="1" y1="100" x2="559" y2="100" class="d-rule"/><line x1="1" y1="200" x2="559" y2="200" class="d-rule"/>
-<text x="40" y="54" class="d-lanelabel" text-anchor="middle">Client</text>
-<text x="40" y="154" class="d-lanelabel" text-anchor="middle">Operations</text>
-<text x="40" y="254" class="d-lanelabel" text-anchor="middle">System</text>
-<circle cx="110" cy="50" r="13" class="d-start"/>
-<rect x="140" y="30" width="96" height="40" rx="8" class="d-task"/><text x="188" y="47" class="d-t" text-anchor="middle">Submits</text><text x="188" y="62" class="d-t" text-anchor="middle">request</text>
-<rect x="140" y="130" width="96" height="40" rx="8" class="d-task"/><text x="188" y="147" class="d-t" text-anchor="middle">Check FICA</text><text x="188" y="162" class="d-t" text-anchor="middle">documents</text>
-<path d="M290 128 L312 150 L290 172 L268 150 Z" class="d-gate"/><text x="290" y="155" class="d-gx" text-anchor="middle">×</text>
-<text x="262" y="186" class="d-small" text-anchor="end">Valid?</text>
-<rect x="340" y="230" width="96" height="40" rx="8" class="d-task"/><text x="388" y="247" class="d-t" text-anchor="middle">Update</text><text x="388" y="262" class="d-t" text-anchor="middle">address</text>
-<rect x="340" y="30" width="96" height="40" rx="8" class="d-task"/><text x="388" y="47" class="d-t" text-anchor="middle">Sends missing</text><text x="388" y="62" class="d-t" text-anchor="middle">documents</text>
-<rect x="455" y="130" width="72" height="40" rx="8" class="d-task"/><text x="491" y="147" class="d-t" text-anchor="middle">Notify</text><text x="491" y="162" class="d-t" text-anchor="middle">client</text>
-<circle cx="491" cy="250" r="13" class="d-end"/>
-<path d="M123 50H138" class="d-flow" marker-end="url(#ar1)"/>
-<path d="M188 70V128" class="d-flow" marker-end="url(#ar1)"/>
-<path d="M236 150H266" class="d-flow" marker-end="url(#ar1)"/>
-<path d="M290 172V250H338" class="d-flow" marker-end="url(#ar1)"/><text x="298" y="222" class="d-small">Yes</text>
-<path d="M290 128V50H338" class="d-flow" marker-end="url(#ar1)"/><text x="298" y="90" class="d-small">No</text>
-<path d="M388 70V96Q388 104 380 110L250 145" class="d-flow d-dash" marker-end="url(#ar1)"/>
-<path d="M436 250H476" class="d-flow" marker-end="url(#ar1)"/>
-
-<path d="M388 230V200Q388 176 412 170L453 155" class="d-flow" marker-end="url(#ar1)"/>
+      <div class="ba-value-head"><div class="label">Techniques in practice</div><h3>One banking request, three views: a client replaces a lost debit card.</h3></div>
+      <div class="ss" id="baSlides" aria-roledescription="carousel" aria-label="BA deliverables example">
+        <div class="ss-tabs" role="tablist"><button type="button" role="tab" class="ss-tab" data-i="0" aria-selected="true"><span>1</span>Value stream</button><button type="button" role="tab" class="ss-tab" data-i="1" aria-selected="false"><span>2</span>User story</button><button type="button" role="tab" class="ss-tab" data-i="2" aria-selected="false"><span>3</span>BPMN flow</button></div>
+        <div class="ss-viewport">
+          <div class="ss-track">
+          <section class="ss-slide" role="group" aria-roledescription="slide" aria-label="1 of 3: Value stream">
+            <div class="ss-head"><span class="ka">Value stream</span><h4>How value reaches the client</h4><p>From the moment the card is lost to the client paying again, with who's involved, the control and the measure at each stage.</p></div>
+            <div class="ss-svg"><svg viewBox="0 0 900 360" role="img" aria-labelledby="vsT"><title id="vsT">Value stream for replacing a lost debit card, in five stages</title>
+<rect x="1" y="1" width="898" height="358" rx="10" class="d-frame"/>
+<text x="30" y="40" class="d-k">TRIGGER</text><text x="30" y="62" class="d-t">Client loses their debit card</text>
+<text x="870" y="40" class="d-k" text-anchor="end">VALUE DELIVERED</text><text x="870" y="60" class="d-t" text-anchor="end">Client can pay again, card is safe</text>
+<g class="vs-chev"><path d="M125 90H259L281 140L259 190H125Z" class="vs-c1"/><path d="M274 90H408L430 140L408 190H274L296 140Z" class="vs-c2"/><path d="M423 90H557L579 140L557 190H423L445 140Z" class="vs-c3"/><path d="M572 90H706L728 140L706 190H572L594 140Z" class="vs-c4"/><path d="M721 90H870V190H721L743 140Z" class="vs-c5"/></g><text x="192" y="136" class="vs-n" text-anchor="middle">1</text><text x="192" y="158" class="vs-l" text-anchor="middle">Report and block</text><text x="347" y="136" class="vs-n" text-anchor="middle">2</text><text x="347" y="158" class="vs-l" text-anchor="middle">Verify identity</text><text x="496" y="136" class="vs-n" text-anchor="middle">3</text><text x="496" y="158" class="vs-l" text-anchor="middle">Order card</text><text x="645" y="136" class="vs-n" text-anchor="middle">4</text><text x="645" y="158" class="vs-l" text-anchor="middle">Deliver</text><text x="802" y="136" class="vs-n" text-anchor="middle">5</text><text x="802" y="158" class="vs-l" text-anchor="middle">Activate and use</text><text x="30" y="226" class="d-k">WHO</text><text x="192" y="226" class="d-t" text-anchor="middle">Client, banking app</text><text x="347" y="226" class="d-t" text-anchor="middle">Contact centre</text><text x="496" y="226" class="d-t" text-anchor="middle">Card operations</text><text x="645" y="226" class="d-t" text-anchor="middle">Courier</text><text x="802" y="226" class="d-t" text-anchor="middle">Client</text><text x="30" y="266" class="d-k">CONTROL</text><text x="192" y="266" class="d-t" text-anchor="middle">Block in real time</text><text x="347" y="266" class="d-t" text-anchor="middle">ID and FICA check</text><text x="496" y="266" class="d-t" text-anchor="middle">Fee disclosed</text><text x="645" y="266" class="d-t" text-anchor="middle">Signed proof</text><text x="802" y="266" class="d-t" text-anchor="middle">PIN set securely</text><text x="30" y="306" class="d-k">MEASURE</text><text x="192" y="306" class="d-t" text-anchor="middle">Time to block</text><text x="347" y="306" class="d-t" text-anchor="middle">Pass rate</text><text x="496" y="306" class="d-t" text-anchor="middle">Order errors</text><text x="645" y="306" class="d-t" text-anchor="middle">Days to deliver</text><text x="802" y="306" class="d-t" text-anchor="middle">Card used in 7 days</text><line x1="30" y1="240" x2="870" y2="240" class="d-rule"/><line x1="30" y1="280" x2="870" y2="280" class="d-rule"/>
 </svg></div>
-          <p>Who does each step, in which system, and where the decision sits. I map the as-is with the people who do the work, then design the to-be.</p>
-        </figure>
-        <figure class="dg">
-          <figcaption><span class="ka">Stakeholder Map</span><b>Power and interest grid</b></figcaption>
-          <div class="dg-svg"><svg viewBox="0 0 560 300" role="img" aria-labelledby="d2t"><title id="d2t">Stakeholder power and interest grid example</title>
-<rect x="1" y="1" width="558" height="298" rx="8" class="d-frame"/>
-<rect x="60" y="20" width="235" height="120" class="d-q"/><rect x="305" y="20" width="235" height="120" class="d-q d-qhot"/>
-<rect x="60" y="150" width="235" height="120" class="d-q"/><rect x="305" y="150" width="235" height="120" class="d-q"/>
-<text x="74" y="42" class="d-qt">Keep satisfied</text><text x="319" y="42" class="d-qt d-qthot">Manage closely</text>
-<text x="74" y="172" class="d-qt">Monitor</text><text x="319" y="172" class="d-qt">Keep informed</text>
-<text x="74" y="60" class="d-small">Short updates, ask for decisions</text><text x="319" y="60" class="d-small d-smallhot">Involve early and often</text>
-<text x="74" y="190" class="d-small">Light touch</text><text x="319" y="190" class="d-small">They often know the real process</text>
-<circle cx="110" cy="100" r="7" class="d-dot"/><text x="124" y="104" class="d-t" text-anchor="start">Risk &amp; Compliance</text>
-<circle cx="350" cy="100" r="7" class="d-dot d-dothot"/><text x="364" y="104" class="d-t d-thot" text-anchor="start">Head of Operations</text>
-<circle cx="110" cy="235" r="7" class="d-dot"/><text x="124" y="239" class="d-t" text-anchor="start">IT vendor</text>
-<circle cx="350" cy="235" r="7" class="d-dot"/><text x="364" y="239" class="d-t" text-anchor="start">Front-line agents</text>
-<path d="M40 270V24" class="d-axis" marker-end="url(#ar2)"/><path d="M60 288H536" class="d-axis" marker-end="url(#ar2)"/>
-<defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" class="d-axishead"/></marker></defs>
-<text x="30" y="150" class="d-axisl" text-anchor="middle" transform="rotate(-90 30 150)">Power</text>
-<text x="300" y="284" class="d-axisl" text-anchor="middle" dy="-4">Interest</text>
+          </section>
+          <section class="ss-slide" role="group" aria-roledescription="slide" aria-label="2 of 3: User story" aria-hidden="true">
+            <div class="ss-head"><span class="ka">User story</span><h4>What the client needs</h4><p>The same request written as a user story, with acceptance criteria that cover the normal path, a control and an exception.</p></div>
+            <div class="us">
+            <div class="us-card">
+              <div class="us-k">User story · US-04</div>
+              <p class="us-text"><b>As a</b> client who has lost my debit card, <b>I want</b> to block it and order a replacement in the banking app, <b>so that</b> no one else can use it and I can pay again quickly.</p>
+              <div class="us-meta"><span>Priority: Must</span><span>Value stream: stages 1–3</span><span>Traces to: REQ-12, REQ-13</span></div>
+            </div>
+            <div class="us-ac">
+              <div class="us-k">Acceptance criteria</div>
+              <ol>
+                <li><b>Given</b> my card is active, <b>when</b> I report it lost, <b>then</b> it is blocked at once and I get a confirmation message.</li>
+                <li><b>Given</b> my identity is verified, <b>when</b> I order a replacement, <b>then</b> I see the fee and the delivery date before I confirm.</li>
+                <li><b>Given</b> I fail the identity check three times, <b>when</b> I try again, <b>then</b> I'm asked to visit a branch with my ID.</li>
+              </ol>
+            </div>
+          </div>
+          </section>
+          <section class="ss-slide" role="group" aria-roledescription="slide" aria-label="3 of 3: BPMN flow" aria-hidden="true">
+            <div class="ss-head"><span class="ka">BPMN flow</span><h4>How the work flows</h4><p>The process in BPMN swimlanes: who does each step, the identity decision, and the branch route when verification fails.</p></div>
+            <div class="ss-svg"><svg viewBox="0 0 900 400" role="img" aria-labelledby="bpT"><title id="bpT">BPMN flow for replacing a lost debit card, across four swimlanes</title>
+<defs><marker id="bpA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-arrowhead"/></marker></defs>
+<rect x="1" y="1" width="898" height="398" rx="10" class="d-frame"/>
+<g class="d-lane"><rect x="1" y="1" width="110" height="99" rx="10"/><rect x="1" y="100" width="110" height="100"/><rect x="1" y="200" width="110" height="100"/><rect x="1" y="300" width="110" height="99" rx="10"/></g>
+<line x1="1" y1="100" x2="899" y2="100" class="d-rule"/><line x1="1" y1="200" x2="899" y2="200" class="d-rule"/><line x1="1" y1="300" x2="899" y2="300" class="d-rule"/>
+<text x="56" y="55" class="d-lanelabel" text-anchor="middle">Client</text>
+<text x="56" y="148" class="d-lanelabel" text-anchor="middle">Banking app</text>
+<text x="56" y="248" class="d-lanelabel" text-anchor="middle">Contact</text><text x="56" y="264" class="d-lanelabel" text-anchor="middle">centre</text>
+<text x="56" y="348" class="d-lanelabel" text-anchor="middle">Card</text><text x="56" y="364" class="d-lanelabel" text-anchor="middle">operations</text>
+<circle cx="145" cy="50" r="14" class="d-start"/><text x="145" y="84" class="d-small" text-anchor="middle">Card lost</text>
+<rect x="180" y="28" width="118" height="44" rx="8" class="d-task"/><text x="239" y="46" class="d-t" text-anchor="middle">Report lost</text><text x="239" y="62" class="d-t" text-anchor="middle">card in app</text>
+<rect x="180" y="128" width="118" height="44" rx="8" class="d-task"/><text x="239" y="146" class="d-t" text-anchor="middle">Block card</text><text x="239" y="162" class="d-t" text-anchor="middle">immediately</text>
+<rect x="330" y="228" width="118" height="44" rx="8" class="d-task"/><text x="389" y="246" class="d-t" text-anchor="middle">Verify</text><text x="389" y="262" class="d-t" text-anchor="middle">identity</text>
+<path d="M505 226 L529 250 L505 274 L481 250 Z" class="d-gate"/><text x="505" y="256" class="d-gx" text-anchor="middle">×</text><text x="505" y="292" class="d-small" text-anchor="middle">Verified?</text>
+<rect x="560" y="28" width="118" height="44" rx="8" class="d-task"/><text x="619" y="46" class="d-t" text-anchor="middle">Visit branch</text><text x="619" y="62" class="d-t" text-anchor="middle">with ID</text>
+<rect x="560" y="328" width="118" height="44" rx="8" class="d-task"/><text x="619" y="346" class="d-t" text-anchor="middle">Order</text><text x="619" y="362" class="d-t" text-anchor="middle">replacement</text>
+<rect x="710" y="328" width="118" height="44" rx="8" class="d-task"/><text x="769" y="346" class="d-t" text-anchor="middle">Courier</text><text x="769" y="362" class="d-t" text-anchor="middle">delivers card</text>
+<rect x="710" y="28" width="118" height="44" rx="8" class="d-task"/><text x="769" y="46" class="d-t" text-anchor="middle">Activate card</text><text x="769" y="62" class="d-t" text-anchor="middle">and set PIN</text>
+<circle cx="862" cy="50" r="14" class="d-end"/>
+<path d="M159 50H178" class="d-flow" marker-end="url(#bpA)"/>
+<path d="M239 72V126" class="d-flow" marker-end="url(#bpA)"/>
+<path d="M298 150H389V226" class="d-flow" marker-end="url(#bpA)"/>
+<path d="M448 250H479" class="d-flow" marker-end="url(#bpA)"/>
+<path d="M505 226V50H558" class="d-flow" marker-end="url(#bpA)"/><text x="513" y="120" class="d-small">No</text>
+<path d="M505 274V350H558" class="d-flow" marker-end="url(#bpA)"/><text x="513" y="320" class="d-small">Yes</text>
+<path d="M678 350H708" class="d-flow" marker-end="url(#bpA)"/>
+<path d="M769 328V74" class="d-flow" marker-end="url(#bpA)"/>
+<path d="M828 50H846" class="d-flow" marker-end="url(#bpA)"/>
+<path d="M619 72V96Q619 104 627 104H690Q700 104 700 94V50H708" class="d-flow d-dash" marker-end="url(#bpA)"/>
 </svg></div>
-          <p>Shows who to involve closely and who to keep informed, so each person gets the right amount of my time.</p>
-        </figure>
-        <figure class="dg">
-          <figcaption><span class="ka">Root Cause Analysis</span><b>Fishbone diagram</b></figcaption>
-          <div class="dg-svg"><svg viewBox="0 0 560 300" role="img" aria-labelledby="d3t"><title id="d3t">Fishbone root cause example: slow turnaround on client requests</title>
-<rect x="1" y="1" width="558" height="298" rx="8" class="d-frame"/>
-<path d="M30 150H418" class="d-spine"/>
-<path d="M418 150l-12 -8v16z" class="d-spinehead"/>
-<rect x="420" y="118" width="124" height="64" rx="8" class="d-effect"/>
-<text x="482" y="142" class="d-et" text-anchor="middle">Slow turnaround</text><text x="482" y="158" class="d-et" text-anchor="middle">on client</text><text x="482" y="174" class="d-et" text-anchor="middle">requests</text>
-<path d="M90 40L150 150M230 40L290 150M370 40L410 150" class="d-bone"/>
-<path d="M90 260L150 150M230 260L290 150" class="d-bone"/>
-<text x="84" y="32" class="d-bt">People</text><text x="224" y="32" class="d-bt">Process</text><text x="352" y="32" class="d-bt">Technology</text>
-<text x="84" y="280" class="d-bt">Data</text><text x="224" y="280" class="d-bt">Environment</text>
-<text x="126" y="86" class="d-small">No clear owner</text>
-<text x="266" y="86" class="d-small">Manual hand-offs</text>
-
-<text x="398" y="82" class="d-small">Re-keyed in</text><text x="404" y="96" class="d-small">2 systems</text>
-<text x="122" y="222" class="d-small">Missing documents</text>
-<text x="262" y="222" class="d-small">Month-end peaks</text>
-</svg></div>
-          <p>Sorts the possible causes of a problem under people, process, technology, data and environment, before I confirm the real one with evidence.</p>
-        </figure>
-        <figure class="dg">
-          <figcaption><span class="ka">Item Tracking · Traceability</span><b>Need to sign-off</b></figcaption>
-          <div class="dg-svg"><svg viewBox="0 0 560 300" role="img" aria-labelledby="d4t"><title id="d4t">Traceability chain example from need to sign-off</title>
-<defs><marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="d-arrowhead"/></marker></defs>
-<rect x="1" y="1" width="558" height="298" rx="8" class="d-frame"/>
-<g>
-<rect x="24" y="30" width="236" height="56" rx="8" class="d-task"/><text x="38" y="52" class="d-k">Need</text><text x="38" y="72" class="d-t">Resolve client queries faster</text>
-<rect x="300" y="30" width="236" height="56" rx="8" class="d-task"/><text x="314" y="52" class="d-k">REQ-08 · Must</text><text x="314" y="72" class="d-t">Agent sees all open cases</text>
-<rect x="24" y="122" width="236" height="56" rx="8" class="d-task"/><text x="38" y="144" class="d-k">User story</text><text x="38" y="164" class="d-t">As an agent, I want one view…</text>
-<rect x="300" y="122" width="236" height="56" rx="8" class="d-task"/><text x="314" y="144" class="d-k">TC-016</text><text x="314" y="164" class="d-t">Two open cases both show</text>
-<rect x="24" y="214" width="236" height="56" rx="8" class="d-task"/><text x="38" y="236" class="d-k">UAT result</text><text x="38" y="256" class="d-t">Passed, no open defects</text>
-<rect x="300" y="214" width="236" height="56" rx="8" class="d-done"/><text x="314" y="236" class="d-kdone">Sign-off</text><text x="314" y="256" class="d-tdone">Business owner accepts</text>
-</g>
-<path d="M260 58H298" class="d-flow" marker-end="url(#ar4)"/>
-<path d="M418 86V100Q418 104 414 104H146Q142 104 142 108V120" class="d-flow" marker-end="url(#ar4)"/>
-<path d="M260 150H298" class="d-flow" marker-end="url(#ar4)"/>
-<path d="M418 178V192Q418 196 414 196H146Q142 196 142 200V212" class="d-flow" marker-end="url(#ar4)"/>
-<path d="M260 242H298" class="d-flow" marker-end="url(#ar4)"/>
-</svg></div>
-          <p>Every requirement traces back to a need and forward to a test and a sign-off, so nothing ships untested.</p>
-        </figure>
+          </section>
+          </div>
+        </div>
+        <div class="ss-nav"><button type="button" class="ss-prev" aria-label="Previous slide">←</button><span class="ss-count">1 / 3</span><button type="button" class="ss-next" aria-label="Next slide">→</button></div>
       </div>
     </div>
 
@@ -523,4 +495,19 @@ var dlg=document.getElementById('viewer'), vimg=document.getElementById('viewerI
 document.querySelectorAll('.shot-btn').forEach(function(btn){btn.addEventListener('click',function(){var i=btn.querySelector('img');vimg.src=i.src;vimg.alt=i.alt;dlg.showModal();});});
 document.getElementById('viewerClose').addEventListener('click',function(){dlg.close();});
 dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close();});
+
+(function(){
+  var ss=document.getElementById('baSlides'); if(!ss) return;
+  var track=ss.querySelector('.ss-track'), slides=ss.querySelectorAll('.ss-slide'), tabs=ss.querySelectorAll('.ss-tab'), count=ss.querySelector('.ss-count'), i=0;
+  function go(n){ i=(n+slides.length)%slides.length; track.style.transform='translateX(-'+(i*100)+'%)';
+    slides.forEach(function(s,k){ if(k===i) s.removeAttribute('aria-hidden'); else s.setAttribute('aria-hidden','true'); });
+    tabs.forEach(function(t,k){ t.setAttribute('aria-selected',k===i?'true':'false'); });
+    count.textContent=(i+1)+' / '+slides.length; }
+  ss.querySelector('.ss-prev').addEventListener('click',function(){ go(i-1); });
+  ss.querySelector('.ss-next').addEventListener('click',function(){ go(i+1); });
+  tabs.forEach(function(t){ t.addEventListener('click',function(){ go(+t.dataset.i); }); });
+  ss.addEventListener('keydown',function(e){ if(e.key==='ArrowRight') go(i+1); if(e.key==='ArrowLeft') go(i-1); });
+  var x0=null; ss.addEventListener('touchstart',function(e){ x0=e.touches[0].clientX; },{passive:true});
+  ss.addEventListener('touchend',function(e){ if(x0===null) return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>50) go(i+(dx<0?1:-1)); x0=null; });
+})();
 </script>
