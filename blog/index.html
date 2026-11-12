@@ -10,6 +10,7 @@ description: Notes on people, process and technology by Ntiyiso Wayne Ndhlovu.
     <p class="prose">What I'm learning as a business and process analyst moving into data engineering.</p>
   </section>
   {% if site.posts.size > 0 %}
+  <p class="post-count label">{{ site.posts.size }} post{% if site.posts.size != 1 %}s{% endif %} · click one to read</p>
   <ol class="post-list">
     {% for post in site.posts %}
     <li>
@@ -17,6 +18,8 @@ description: Notes on people, process and technology by Ntiyiso Wayne Ndhlovu.
         <span class="label">{{ post.date | date: "%-d %b %Y" }}{% if post.tags.size > 0 %} · {{ post.tags | join: " · " }}{% endif %}</span>
         <h2>{{ post.title }}</h2>
         <p>{% if post.description or post.summary %}{{ post.description | default: post.summary }}{% else %}{{ post.excerpt | strip_html | truncatewords: 32 }}{% endif %}</p>
+        {% assign words = post.content | strip_html | number_of_words %}{% assign mins = words | divided_by: 200 | plus: 1 %}
+        <span class="post-meta"><span>{{ mins }} min read</span><span class="read-more">Read post →</span></span>
       </a>
     </li>
     {% endfor %}

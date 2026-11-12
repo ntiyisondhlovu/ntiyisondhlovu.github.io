@@ -687,3 +687,23 @@ section.ss-slide{padding-block:clamp(18px,3vw,30px);background:none;box-shadow:n
 .us-ac li{counter-increment:ac;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;padding:12px 14px 12px 46px;position:relative;font-size:14.5px;line-height:1.5}
 .us-ac li::before{content:"AC" counter(ac);position:absolute;left:12px;top:13px;font-family:var(--mono);font-size:11px;color:var(--accent)}
 .us-ac b{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--accent)}
+/* Blog post in boxes */
+.post-body.boxed{display:grid;gap:18px}
+.post-body.boxed > *{margin:0}
+.pbox{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius,12px);padding:26px 28px 8px;box-shadow:0 1px 2px rgba(20,27,38,.04),0 6px 18px -12px rgba(20,27,38,.18)}
+.pbox > *{margin-block:0 1em}
+.pbox h2{font-size:23px;margin:0 0 .6em;padding-right:52px}
+.pbox-n{position:absolute;top:22px;right:24px;font-family:var(--mono);font-size:12px;font-weight:500;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:4px 10px}
+.pbox-intro{background:var(--accent-soft);border-color:transparent;border-left:4px solid var(--accent);font-size:18.5px}
+.pbox-intro p:last-child{font-weight:600;color:var(--accent)}
+.pbox ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.pbox ul li{background:var(--tint);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:8px;padding:14px 16px;font-size:15.5px;line-height:1.55}
+.pbox:last-child{border-top:4px solid var(--accent)}
+@media (max-width:600px){.pbox{padding:22px 18px 6px}.pbox h2{font-size:21px}}
+/* Blog list cards */
+.post-count{margin:0 0 14px}
+.post-list a{padding:26px 28px;border-left:4px solid var(--accent)}
+.post-list a:hover{transform:translateY(-2px)}
+.post-meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.read-more{color:var(--accent);font-weight:500}
+.post-list a:hover .read-more{text-decoration:underline}

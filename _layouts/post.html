@@ -9,8 +9,12 @@ layout: default
       <h1>{{ page.title }}</h1>
       {% assign blurb = page.description | default: page.summary %}{% if blurb %}<p class="lede">{{ blurb }}</p>{% endif %}
     </header>
-    <div class="post-body">
-      {{ content }}
+    {% assign parts = content | split: '<h2' %}
+    <div class="post-body boxed">
+      <section class="pbox pbox-intro">{{ parts.first }}</section>
+      {% for part in parts offset:1 %}{% assign n = forloop.index | prepend: '0' | slice: -2, 2 %}
+      <section class="pbox"><span class="pbox-n">{{ n }}</span><h2{{ part }}</section>
+      {% endfor %}
     </div>
     <div class="share" aria-label="Share this post">
       <span class="label">Share</span>
