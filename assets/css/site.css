@@ -549,3 +549,6 @@ dialog#pbViewer img{display:block;width:100%;height:auto;border-radius:6px;borde
 .six-q b::before{content:counter(q);display:inline-grid;place-items:center;width:22px;height:22px;margin-right:8px;border-radius:50%;background:var(--accent);color:#FFFFFF;font-family:var(--mono);font-size:11px;vertical-align:2px}
 .six-q span{font-size:14.5px;color:var(--muted)}
 .six-q li{align-content:start}
+.journey li .ka{margin-left:6px;vertical-align:1px;font-size:9.5px;padding:2px 7px}
+.journey > li > p .ka{margin-left:6px}
+.ba-note .ka{display:block;width:max-content;max-width:100%;margin-top:8px;background:#FFFFFF}
