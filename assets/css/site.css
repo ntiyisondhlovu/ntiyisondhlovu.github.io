@@ -535,3 +535,17 @@ dialog#pbViewer img{display:block;width:100%;height:auto;border-radius:6px;borde
 .pillar .babok{margin:0;font-size:12.5px;color:var(--muted);font-family:var(--mono)}
 .pillar .babok b{color:var(--accent);font-weight:500}
 .ba-grid .ka{align-self:flex-start}
+
+/* approach section (BA playbook messaging) */
+.approach{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:start}
+@media(max-width:860px){.approach{grid-template-columns:1fr;gap:32px}}
+.def{margin:0 0 18px;padding:22px 24px;border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;font-family:var(--display);font-size:clamp(19px,2.2vw,23px);line-height:1.4;color:var(--ink)}
+.def cite{display:block;margin-top:10px;font-family:var(--mono);font-style:normal;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.approach .prose{margin:0}
+.six-q{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;counter-reset:q}
+@media(max-width:520px){.six-q{grid-template-columns:1fr}}
+.six-q li{counter-increment:q;background:#FFFFFF;border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:4px;box-shadow:0 1px 2px rgba(20,27,38,.04),0 6px 18px -12px rgba(20,27,38,.18)}
+.six-q b{font-family:var(--display);font-size:18px;color:var(--ink)}
+.six-q b::before{content:counter(q);display:inline-grid;place-items:center;width:22px;height:22px;margin-right:8px;border-radius:50%;background:var(--accent);color:#FFFFFF;font-family:var(--mono);font-size:11px;vertical-align:2px}
+.six-q span{font-size:14.5px;color:var(--muted)}
+.six-q li{align-content:start}
