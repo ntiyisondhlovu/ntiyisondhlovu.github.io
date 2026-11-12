@@ -581,3 +581,20 @@ dialog#pbViewer img{display:block;width:100%;height:auto;border-radius:6px;borde
 .uat b::before{content:counter(u) "  ";font-family:var(--mono);font-size:11px;color:var(--accent);font-weight:500}
 .uat span{font-size:13px;color:var(--muted)}
 .uat li{align-content:start}
+
+/* value block in the business analysis section */
+.ba-value{margin-top:24px}
+.ba-value-head{display:grid;gap:6px;margin-bottom:16px}
+.ba-value-head h3{font-size:clamp(19px,2.2vw,22px);max-width:34em}
+.ba-value-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media(max-width:900px){.ba-value-grid{grid-template-columns:1fr}}
+.vs-track{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.vs-track li{font-size:12.5px;font-weight:600;color:var(--accent);background:#FFFFFF;border:1px solid var(--line);border-radius:999px;padding:4px 10px;position:relative}
+.vs-track li:not(:last-child)::after{content:"→";position:absolute;right:-11px;top:50%;transform:translateY(-50%);font-size:11px;color:var(--muted);font-weight:400}
+.vs-track{column-gap:14px}
+.vg-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.vg-list li{display:grid;grid-template-columns:72px 1fr;gap:10px;align-items:baseline;background:#FFFFFF;border:1px solid var(--line);border-radius:8px;padding:8px 12px}
+.vg-list b{font-size:14px;color:var(--accent)}
+.vg-list span{font-size:13.5px;color:var(--ink)}
+.bc-list{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px}
+.bc-list li::marker{color:var(--accent);font-weight:600}
